@@ -1,0 +1,156 @@
+body {
+  margin: 0;
+  font-family: -apple-system, 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
+    'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: 'Roboto' serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1vw;
+  text-wrap: balance;
+}
+
+.TodoList {
+  border: 2px solid lightgray;
+  max-width: 1200px;
+  margin: 1vw auto;
+  padding: 3vw 0;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  border-top-right-radius: 3.2rem;
+  border-top-left-radius: 3.2rem;
+}
+
+.InputContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1vw 2vw;
+  padding: 0;
+  height: 5vh;
+}
+
+.InputItem {
+  display: flex;
+  width: 80%;
+  margin: 0 1vw 0 0;
+  height: 30%;
+  padding: 5px;
+  font-size: 1.2rem;
+}
+
+.available {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: #50fa7b; */
+  background-color: #a6e22e;
+  cursor: pointer;
+  width: 19%;
+  height: 30%;
+  padding: 14px;
+  border-radius: 0.25rem;
+}
+
+.unavailable {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: #ff5555; */
+  background-color: #f44747;
+  pointer-events: none;
+  width: 19%;
+  height: 30%;
+  padding: 14px;
+  border-radius: 0.25rem;
+}
+
+.TodosContainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+}
+
+.TodoItem {
+  display: grid;
+  grid-template-columns: 0.1fr 1fr 0.2fr;
+  margin: 1vh 2vw;
+  padding: 1.5vw;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid lightgray;
+}
+
+.DeleteBtn {
+  display: none;
+  background-color: #f44747;
+  border-radius: 0.2rem;
+  margin: 0 auto;
+  padding: 0 3px;
+  width: 60%;
+  height: 150%;
+  cursor: pointer;
+}
+
+.MessageBox {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1vw;
+  font-size: 1.5rem;
+}
+
+.FilterBox {
+  display: flex;
+  max-width: 30%;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 0 1.5vw 0;
+  font-size: 1.5rem;
+}
+
+.SortedBox {
+  display: flex;
+  justify-content: space-around;
+  margin: 0 10vw 1vw;
+  flex-wrap: wrap;
+}
+
+.TodoItem:hover .DateContainer {
+  display: none;
+}
+
+.DateContainer {
+  color: rgba(111, 111, 111, 1);
+}
+
+.TodoItem:hover .DeleteBtn {
+  display: inline-block;
+}
+
+.TextContainer {
+  text-wrap: break-word;
+}
+
+.SortBtn {
+  padding: 0.7vw 3vw;
+  border-radius: 0.25rem;
+  font-size: 1.1rem;
+  min-width: 100px;
+  border: 1px solid lightgrey;
+}
+
+.SortBtn.clicked {
+  background-color: #282a36;
+  color: #f8f8f2;
+  transition: color, background-color 0.3s ease-in-out;
+}
+
+.done {
+  background-color: rgba(211, 211, 211, 0.4);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
